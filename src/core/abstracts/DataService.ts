@@ -1,6 +1,8 @@
-import { Skill } from "../entities";
+import { Skill, Vacancy } from "../entities";
 import { GenericRepository } from "./GenericRepository";
+import { SkillGenericRepository } from "./SkillGenericRepository";
 
 export abstract class DataService {
-    abstract skills: GenericRepository<Skill>
+    abstract skills: SkillGenericRepository
+    abstract vacancies: GenericRepository<Vacancy>
 }

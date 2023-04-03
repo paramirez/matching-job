@@ -1,9 +1,9 @@
-import { GenericRepository } from "src/core/abstracts";
+import { GenericRepository, SkillGenericRepository } from "src/core/abstracts";
 import { Skill } from "src/core/entities";
-import { Nullable } from "src/core/valueObjects";
+import { Nullable, ValidSkill } from "src/core/valueObjects";
 import { store } from "./store";
 
-export class SkillRepository extends GenericRepository<Skill> {
+export class SkillRepository extends SkillGenericRepository {
     private getSkillStore = () => Object.values<Skill>(store.skills)
 
     async getAll(): Promise<Skill[]> {
@@ -24,9 +24,20 @@ export class SkillRepository extends GenericRepository<Skill> {
 
     async update(id: string, partial: Skill): Promise<void> {
         const skill = await this.get(id)
-        store[id] = {
+        store.skills[id] = {
             ...skill,
             ...partial
         }
     }
+
+    async hasAllSkills(validSkills: ValidSkill[]) {
+        const skills = await validSkills.reduce(async (previousValue, currentValue) => {
+            const result = await previousValue;
+            const skill = await this.get(currentValue.skillId);
+            if (skill) return Promise.resolve(result.concat(currentValue.skillId))
+            return Promise.resolve([])
+        }, Promise.resolve([]))
+        return skills.length === validSkills.length
+    }
+
 }

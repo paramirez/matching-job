@@ -3,7 +3,6 @@ import { DataService } from "src/core/abstracts";
 import { CreateSkillDto, UpdateSkillDto } from "src/core/dtos";
 import { Skill } from "src/core/entities";
 import { SkillFactoryService } from "./skill.factory.service";
-import { Nullable } from "src/core/valueObjects";
 import { AlreadyExistError, NotFoundError } from "src/core/errors";
 
 @Injectable()

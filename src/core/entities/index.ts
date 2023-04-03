@@ -1,1 +1,2 @@
-export * from './Skill'
+export * from './skill'
+export * from './vacancy'
