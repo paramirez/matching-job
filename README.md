@@ -60,6 +60,10 @@ $ npm run test:e2e
 # $ npm run test:cov
 ```
 
+## Swagger DOC
+
+The Swagger documentation API will be available at `http://localhost:3000/api/`.
+
 ## Contributions
 
 If you wish to contribute to this project, you are welcome to do so! Simply fork the repository, make your changes, and send a pull request. You can also open issues to report bugs or propose new features.
