@@ -14,13 +14,13 @@ This project is a Nest JS Rest API that allows to match job applicants with avai
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/nestjs-job-matching.git
+git clone https://github.com/paramirez/matching-job.git
 ```
 
 2. Install dependencies:
 
 ``` bash
-cd nestjs-job-matching
+cd matching-job
 npm install
 ```
 
