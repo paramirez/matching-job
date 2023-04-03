@@ -1,3 +1,2 @@
-export * from './GenericRepository'
-export * from './SkillGenericRepository'
-export * from './DataService'
+export * from './generic-repository'
+export * from './data-service'

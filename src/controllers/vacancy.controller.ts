@@ -4,7 +4,7 @@ import { CreateVacancyDto, IdVacancyDto, UpdateVacancyDto, ValidSkillDto } from 
 import { Vacancy } from "src/core/entities";
 import { Nullable, ResponseData } from "src/core/valueObjects";
 import { VacancyUseCase } from "src/useCases/vacancy/vacancy.usecase";
-import { VacancyRequiredSkillUseCase } from "src/useCases/vacancy/vacancyRequiredSkill.usecase";
+import { VacancyRequiredSkillUseCase } from "src/useCases/vacancy/vacancy-required-skill.usecase";
 
 @ApiTags('vacancy')
 @Controller('api/vacancy')
@@ -42,7 +42,7 @@ export class VacancyController {
         await this.vacancyUseCase.updateVacancy(params.id, body)
     }
 
-    @Post(':id/skill')
+    @Post(':id/skills')
     @ApiOperation({ summary: "Add a skill of a vacancy" })
     @ApiParam({ name: "id", description: 'Identifier in format UUID for a vacancy', type: "string" })
     @ApiBody({ description: 'Skill and years of experience', type: ValidSkillDto })
@@ -50,7 +50,7 @@ export class VacancyController {
         await this.vacancyRequiredSkillUseCase.addRequiredSkill(id, body)
     }
 
-    @Delete(':id/skill/:skillId')
+    @Delete(':id/skills/:skillId')
     @ApiOperation({ summary: "Remove a skill of a vacancy" })
     @ApiParam({ name: "id", description: 'Identifier in format UUID for a vacancy', type: "string" })
     @ApiParam({ name: "skillId", description: 'Identifier in format UUID for a skill', type: "string" })

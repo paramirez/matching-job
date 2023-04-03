@@ -4,9 +4,9 @@ import { ArrayMinSize, IsArray, IsNotEmpty, IsString, IsUUID, ValidateNested } f
 import { ValidSkill } from "../valueObjects";
 import { Type } from "class-transformer";
 import { ValidSkillDto } from "./validSkill.dto";
-import { Vacancy } from "../entities";
+import { User } from "../entities";
 
-export class VacancyDto implements Vacancy {
+export class UserDto implements User {
     @IsUUID()
     @IsNotEmpty()
     @ApiProperty({
@@ -18,10 +18,10 @@ export class VacancyDto implements Vacancy {
     @IsString()
     @IsNotEmpty()
     @ApiProperty({
-        description: "PositionName Name of vacancy",
+        description: "Name of user",
         type: String
     })
-    positionName: string;
+    name: string;
 
     @IsArray()
     @ValidateNested({ each: true })
@@ -29,13 +29,13 @@ export class VacancyDto implements Vacancy {
     @ArrayMinSize(10)
     @Type(() => ValidSkillDto)
     @ApiProperty({
-        description: "Skills required to apply for the vacancy",
+        description: "Skills to the user",
         type: [ValidSkillDto]
     })
-    requiredSkills: ValidSkill[];
+    skills: ValidSkill[];
 }
 
-export class CreateVacancyDto extends OmitType(VacancyDto, ['requiredSkills']) { }
-export class UpdateVacancyDto extends PartialType(OmitType(VacancyDto, ['id', 'requiredSkills'])) { }
-export class IdVacancyDto extends PickType(VacancyDto, ['id']) { }
-export class RequiredSkillsDto extends PickType(VacancyDto, ['requiredSkills']) { }
+export class CreateUserDto extends OmitType(UserDto, ['skills']) { }
+export class UpdateUserDto extends PartialType(OmitType(UserDto, ['id', 'skills'])) { }
+export class IdUserDto extends PickType(UserDto, ['id']) { }
+export class UserSkillsDto extends PickType(UserDto, ['skills']) { }

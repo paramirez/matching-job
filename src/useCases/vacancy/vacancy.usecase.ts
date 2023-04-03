@@ -3,8 +3,7 @@ import { DataService } from "src/core/abstracts";
 import { CreateVacancyDto, UpdateVacancyDto } from "src/core/dtos";
 import { Vacancy } from "src/core/entities";
 import { VacancyFactoryService } from "./vacancy.factory.service";
-import { AlreadyExistError, FieldRequiredError, NotFoundError } from "src/core/errors";
-import { ValidSkill, haveSkills, isEmptySkills } from "src/core/valueObjects";
+import { AlreadyExistError, NotFoundError } from "src/core/errors";
 
 @Injectable()
 export class VacancyUseCase {

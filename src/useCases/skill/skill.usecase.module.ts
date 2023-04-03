@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { DataServiceModule } from "src/services/dataServices/DataServices.module";
+import { DataServiceModule } from "src/services";
 import { SkillFactoryService } from "./skill.factory.service";
 import { SkillUseCase } from "./skill.usecase";
 

@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { InMemoryDataServiceModule } from "src/infrastructure/dataServices/inMemory/inMemory.dataService.module";
+import { InMemoryDataServiceModule } from "src/infrastructure/data-services/in-memory/in-memory.dataService.module";
 
 @Module({
     imports: [InMemoryDataServiceModule],
