@@ -1,10 +1,10 @@
 import { Body, Controller, Delete, Get, HttpCode, Param, Post, Put } from "@nestjs/common";
 import { ApiBody, ApiOkResponse, ApiOperation, ApiParam, ApiTags } from "@nestjs/swagger";
-import { CreateUserDto, IdUserDto, UpdateUserDto, ValidSkillDto } from "src/core/dtos";
-import { User } from "src/core/entities";
-import { Nullable, ResponseData } from "src/core/valueObjects";
-import { UserSkillUseCase } from "src/useCases/user/user-skill.usecase";
-import { UserUseCase } from "src/useCases/user/user.usecase";
+import { UserUseCase } from "../useCases/user/user.usecase";
+import { UserSkillUseCase } from "../useCases/user/user-skill.usecase";
+import { Nullable, ResponseData } from "../core/valueObjects";
+import { User } from "../core/entities";
+import { CreateUserDto, IdUserDto, UpdateUserDto, ValidSkillDto } from "../core/dtos";
 
 @ApiTags('user')
 @Controller('api/user')

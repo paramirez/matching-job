@@ -1,9 +1,9 @@
 import { Injectable } from "@nestjs/common";
-import { DataService } from "src/core/abstracts";
-import { CreateSkillDto, UpdateSkillDto } from "src/core/dtos";
-import { Skill } from "src/core/entities";
+import { DataService } from "../../core/abstracts";
+import { Skill } from "../../core/entities";
+import { CreateSkillDto, UpdateSkillDto } from "../../core/dtos";
+import { AlreadyExistError, NotFoundError } from "../../core/errors";
 import { SkillFactoryService } from "./skill.factory.service";
-import { AlreadyExistError, NotFoundError } from "src/core/errors";
 
 @Injectable()
 export class SkillUseCase {

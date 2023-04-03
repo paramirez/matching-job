@@ -1,10 +1,10 @@
 import { Controller, Get, Param } from "@nestjs/common";
 import { ApiOkResponse, ApiOperation, ApiTags } from "@nestjs/swagger";
-import { VacancyDto } from "src/core/dtos";
-import { Vacancy } from "src/core/entities";
-import { ResponseData } from "src/core/valueObjects";
-import { UserUseCase } from "src/useCases/user/user.usecase";
-import { MatchingVacanciesUseCase } from "src/useCases/vacancy/matching-vacancies.usecase";
+import { UserUseCase } from "../useCases/user/user.usecase";
+import { MatchingVacanciesUseCase } from "../useCases/vacancy/matching-vacancies.usecase";
+import { ResponseData } from "../core/valueObjects";
+import { VacancyDto } from "../core/dtos";
+import { Vacancy } from "../core/entities";
 
 @ApiTags('user')
 @Controller('api/user/:id/vacancies/match')

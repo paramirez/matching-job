@@ -1,10 +1,10 @@
 import { Body, Controller, Delete, Get, HttpCode, Param, Post, Put } from "@nestjs/common";
 import { ApiBody, ApiOkResponse, ApiOperation, ApiParam, ApiTags } from "@nestjs/swagger";
-import { CreateVacancyDto, IdVacancyDto, UpdateVacancyDto, ValidSkillDto } from "src/core/dtos";
-import { Vacancy } from "src/core/entities";
-import { Nullable, ResponseData } from "src/core/valueObjects";
-import { VacancyUseCase } from "src/useCases/vacancy/vacancy.usecase";
-import { VacancyRequiredSkillUseCase } from "src/useCases/vacancy/vacancy-required-skill.usecase";
+import { VacancyUseCase } from "../useCases/vacancy/vacancy.usecase";
+import { VacancyRequiredSkillUseCase } from "../useCases/vacancy/vacancy-required-skill.usecase";
+import { Vacancy } from "../core/entities";
+import { Nullable, ResponseData } from "../core/valueObjects";
+import { CreateVacancyDto, IdVacancyDto, UpdateVacancyDto, ValidSkillDto } from "../core/dtos";
 
 @ApiTags('vacancy')
 @Controller('api/vacancy')

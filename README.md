@@ -47,6 +47,19 @@ The API will be available at `http://localhost:3000`.
 - MongoDB
 - TODO: Jest (for testing) 
 
+## Test
+
+```bash
+# unit tests
+# $ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+# $ npm run test:cov
+```
+
 ## Contributions
 
 If you wish to contribute to this project, you are welcome to do so! Simply fork the repository, make your changes, and send a pull request. You can also open issues to report bugs or propose new features.

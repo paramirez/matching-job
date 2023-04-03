@@ -1,7 +1,7 @@
 import { Controller, Get } from "@nestjs/common";
 import { ApiOkResponse, ApiOperation, ApiResponse, ApiTags } from "@nestjs/swagger";
-import { UUIDResponse } from "src/core/dtos";
-import { UUID } from "src/core/utils/UUID";
+import { UUIDResponse } from "../core/dtos";
+import { UUID } from "../core/utils/UUID";
 
 @ApiTags('utils')
 @Controller('api/utils')

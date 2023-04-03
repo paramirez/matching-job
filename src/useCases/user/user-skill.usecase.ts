@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common"
-import { DataService } from "src/core/abstracts"
-import { NotFoundError } from "src/core/errors"
-import { ValidSkill } from "src/core/valueObjects"
+import { DataService } from "../../core/abstracts"
+import { ValidSkill } from "../../core/valueObjects"
+import { NotFoundError } from "../../core/errors"
 
 @Injectable()
 export class UserSkillUseCase {

@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
-import { CreateSkillDto, UpdateSkillDto } from "src/core/dtos";
-import { Skill } from "src/core/entities";
-import { UUID } from "src/core/utils/UUID";
+import { CreateSkillDto, UpdateSkillDto } from "../../core/dtos";
+import { Skill } from "../../core/entities";
+import { UUID } from "../../core/utils/UUID";
 
 @Injectable()
 export class SkillFactoryService {

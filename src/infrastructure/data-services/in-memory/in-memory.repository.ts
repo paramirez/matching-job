@@ -1,7 +1,8 @@
-import { GenericRepository } from "src/core/abstracts";
-import { Nullable } from "src/core/valueObjects";
+
+import { GenericRepository } from "../../../core/abstracts";
+import { Entity } from "../../../core/entities";
+import { Nullable } from "../../../core/valueObjects";
 import { InMemoryStore, inMemoryStore } from "./in-memory.store";
-import { Entity } from "src/core/entities";
 
 export class InMemoryRepository<T extends Entity> extends GenericRepository<T> {
 

@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { DataServiceModule } from 'src/services';
+import { DataServiceModule } from '../../services';
 import { UserFactoryService } from './user.factory.service';
 import { UserUseCase } from './user.usecase';
 import { UserSkillUseCase } from './user-skill.usecase';

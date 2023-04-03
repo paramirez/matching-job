@@ -13,6 +13,5 @@ export const skillsStore: Skill[] = [
     { id: golangId, name: "Golang" },
     { id: mongodbId, name: "mongodb" },
     { id: reactId, name: "React" },
-    { id: nodeId, name: "NodeJS" },
-    { id: mongodbId, name: "mongodb" },
+    { id: nodeId, name: "NodeJS" }
 ]

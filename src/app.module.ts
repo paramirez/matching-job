@@ -8,6 +8,7 @@ import { VacancyUseCaseModule } from "./useCases/vacancy/vacancy.usecase.module"
 import { UserModule } from './useCases/user/user.module';
 import { UserController } from "./controllers/user.controller";
 import { UserMatchingVacanciesController } from "./controllers/user-mathcing-vacancies.controller";
+import { AppController } from "./controllers/app.controller";
 
 @Module({
     imports: [
@@ -21,7 +22,8 @@ import { UserMatchingVacanciesController } from "./controllers/user-mathcing-vac
         VacancyController,
         UserController,
         UUIDController,
-        UserMatchingVacanciesController
+        UserMatchingVacanciesController,
+        AppController
     ],
     providers: []
 })

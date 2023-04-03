@@ -1,9 +1,9 @@
 import { Body, Controller, Get, HttpCode, Param, Post, Put } from "@nestjs/common";
 import { ApiOkResponse, ApiOperation, ApiParam, ApiTags } from "@nestjs/swagger";
-import { CreateSkillDto, IdSkillDto, SkillDto, UpdateSkillDto } from "src/core/dtos";
-import { Skill } from "src/core/entities";
-import { Nullable, ResponseData } from "src/core/valueObjects";
-import { SkillUseCase } from "src/useCases/skill/skill.usecase";
+import { SkillUseCase } from "../useCases/skill/skill.usecase";
+import { Skill } from "../core/entities";
+import { Nullable, ResponseData } from "../core/valueObjects";
+import { CreateSkillDto, IdSkillDto, UpdateSkillDto } from "../core/dtos";
 
 @ApiTags('skill')
 @Controller('api/skill')

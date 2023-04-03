@@ -1,9 +1,9 @@
 import { Injectable } from "@nestjs/common";
-import { DataService } from "src/core/abstracts";
-import { CreateUserDto, UpdateUserDto } from "src/core/dtos";
-import { User } from "src/core/entities";
+import { DataService } from "../../core/abstracts";
 import { UserFactoryService } from "./user.factory.service";
-import { AlreadyExistError, NotFoundError } from "src/core/errors";
+import { User } from "../../core/entities";
+import { AlreadyExistError, NotFoundError } from "../../core/errors";
+import { CreateUserDto, UpdateUserDto } from "../../core/dtos";
 
 @Injectable()
 export class UserUseCase {

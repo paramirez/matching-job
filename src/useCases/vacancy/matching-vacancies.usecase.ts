@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common"
-import { DataService } from "src/core/abstracts"
-import { Vacancy } from "src/core/entities"
-import { ValidSkill } from "src/core/valueObjects"
+import { DataService } from "../../core/abstracts"
+import { ValidSkill } from "../../core/valueObjects"
+import { Vacancy } from "../../core/entities"
 
 @Injectable()
 export class MatchingVacanciesUseCase {
